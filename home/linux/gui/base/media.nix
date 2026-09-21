@@ -18,8 +18,6 @@
     vulkan-tools
     mesa-demos
     nvitop
-    # Zoom: Settings > Share Screen > Advanced > Screen Capture Mode on Wayland > PipeWire Mode.
-    (pkgs-x64.zoom-us)
   ];
 
   programs.mpv = {
