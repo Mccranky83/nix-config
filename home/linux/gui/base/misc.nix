@@ -12,13 +12,7 @@
     # remote desktop(rdp connect)
     remmina
     freerdp # required by remmina
-
-    # my custom hardened packages
-    nixpaks.qq
-    nixpaks.telegram-desktop
-    # qqmusic
-    bwraps.wechat
-    # discord # update too frequently, use the web version instead
+    telegram-desktop
   ];
 
   # allow fontconfig to discover fonts and configurations installed through home.packages

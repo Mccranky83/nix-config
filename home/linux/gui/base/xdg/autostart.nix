@@ -15,13 +15,9 @@
   xdg.autostart.entries = [
     "${pkgs.foot}/share/applications/foot.desktop"
     "${pkgs.alacritty}/share/applications/Alacritty.desktop"
-    "${pkgs.ghostty}/share/applications/com.mitchellh.ghostty.desktop"
-
-    "${pkgs-master.clash-verge-rev}/share/applications/clash-verge.desktop"
 
     # nixpaks
-    "${pkgs.nixpaks.firefox}/share/applications/org.mozilla.firefox.desktop"
-    "${pkgs.nixpaks.telegram-desktop}/share/applications/org.telegram.desktop.desktop"
-    "${pkgs.google-chrome}/share/applications/google-chrome.desktop"
+    "${pkgs.firefox}/share/applications/firefox.desktop"
+    "${pkgs.telegram-desktop}/share/applications/org.telegram.desktop.desktop"
   ];
 }
