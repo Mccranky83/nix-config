@@ -14,4 +14,3 @@ let
   otherExpected = lib.genAttrs otherHostsNames (name: name);
 in
 (specialExpected // otherExpected)
-

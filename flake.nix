@@ -48,8 +48,6 @@
     # get some latest packages from the master branch
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
 
-
-
     # home-manager, used for managing user configuration
     home-manager = {
       url = "github:nix-community/home-manager/master";
