@@ -5,7 +5,7 @@
 }:
 {
   # Don't allow mutation of users outside the config.
-  users.mutableUsers = false;
+  users.mutableUsers = true;
 
   users.groups = {
     "${myvars.username}" = { };
