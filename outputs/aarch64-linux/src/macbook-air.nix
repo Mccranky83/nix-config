@@ -11,7 +11,7 @@
   ...
 }@args:
 let
-  name = "mccranky";
+  name = "macbook-air";
   base-modules = {
     nixos-modules =
       (map mylib.relativeToRoot [

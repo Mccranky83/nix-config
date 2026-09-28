@@ -4,7 +4,7 @@
 }:
 let
   specialExpected = {
-    "mccranky-niri" = "mccranky";
+    "macbook-air-niri" = "macbook-air";
   };
   specialHostNames = builtins.attrNames specialExpected;
 

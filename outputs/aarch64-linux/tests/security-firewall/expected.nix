@@ -3,5 +3,5 @@
   outputs,
 }:
 lib.genAttrs (builtins.attrNames outputs.nixosConfigurations) (
-  name: name == "mccranky-niri"
+  name: name == "macbook-air-niri"
 )

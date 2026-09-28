@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  hostName = "mccranky"; # Define your hostname.
+  hostName = "macbook-air"; # Define your hostname.
   mkSymlink = config.lib.file.mkOutOfStoreSymlink;
 in
 {
