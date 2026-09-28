@@ -8,9 +8,4 @@
   };
 
   boot.loader.timeout = lib.mkDefault 8; # wait for x seconds to select the boot entry
-
-  console = {
-    font = "ter-v32n";
-    earlySetup = true;
-  };
 }

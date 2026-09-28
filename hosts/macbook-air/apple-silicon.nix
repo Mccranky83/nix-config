@@ -38,6 +38,12 @@
   # configures the network interface(include wireless) via `nmcli` & `nmtui`
   networking.networkmanager.enable = true;
 
+  console = {
+    font = "ter-v32n";
+    packages = [ pkgs.terminus_font ];
+    earlySetup = true;
+  };
+
   # Specify path to peripheral firmware files.
   hardware.asahi = {
     enable = true;
