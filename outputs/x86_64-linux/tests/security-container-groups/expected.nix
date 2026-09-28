@@ -1,4 +1,0 @@
-{
-  userHasDockerAccess = false;
-  userHasPodmanAccess = false;
-}

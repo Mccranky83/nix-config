@@ -4,7 +4,7 @@
 }:
 let
   specialExpected = {
-    "shoukei-niri" = "shoukei";
+    "mccranky-niri" = "mccranky";
   };
   specialHostNames = builtins.attrNames specialExpected;
 
@@ -14,3 +14,4 @@ let
   otherExpected = lib.genAttrs otherHostsNames (name: name);
 in
 (specialExpected // otherExpected)
+

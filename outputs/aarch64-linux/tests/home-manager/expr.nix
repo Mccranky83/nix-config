@@ -6,7 +6,7 @@
 let
   username = myvars.username;
   hosts = [
-    "shoukei-niri"
+    "mccranky-niri"
   ];
 in
 lib.genAttrs hosts (

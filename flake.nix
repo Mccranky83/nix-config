@@ -1,5 +1,5 @@
 {
-  description = "Ryan Yin's nix configuration for both NixOS & macOS";
+  description = "Mccranky's NixOS configuration for aarch64-linux (Apple Silicon)";
 
   ##################################################################################################################
   #
@@ -45,18 +45,10 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-2505.url = "github:nixos/nixpkgs/nixos-25.05";
 
-    # nixpkgs with some custom patches
-    nixpkgs-patched.url = "github:ryan4yin/nixpkgs/nixos-unstable-patched";
     # get some latest packages from the master branch
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
 
-    # for macos
-    # nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-26.05-darwin";
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nix-darwin = {
-      url = "github:lnl7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
-    };
+
 
     # home-manager, used for managing user configuration
     home-manager = {
@@ -80,26 +72,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v1.1.0";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    preservation = {
-      url = "github:nix-community/preservation";
-    };
-
     # secrets management
     agenix = {
       # lock with git commit at May 18, 2025
       url = "github:ryantm/agenix/4835b1dc898959d8547a871ef484930675cb47f1";
       # replaced with a type-safe reimplementation to get a better error message and less bugs.
       # url = "github:ryan4yin/ragenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    disko = {
-      url = "github:nix-community/disko/v1.13.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -145,18 +123,6 @@
     };
 
     ########################  My own repositories  #########################################
-
-    # my private secrets, it's a private repository, you need to replace it with your own.
-    # use ssh protocol to authenticate via ssh-agent/ssh-key, and shallow clone to save time
-    mysecrets = {
-      url = "git+ssh://git@github.com/ryan4yin/nix-secrets.git?shallow=1";
-      flake = false;
-    };
-
-    # my-asahi-firmware = {
-    #   url = "git+ssh://git@github.com/ryan4yin/asahi-firmware.git?shallow=1";
-    #   flake = false;
-    # };
 
     # my wallpapers
     wallpapers = {
