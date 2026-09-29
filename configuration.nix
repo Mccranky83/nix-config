@@ -13,7 +13,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   hardware.asahi.enable = true;
-  hardware.asahi.useExperimentalGPUDriver = true;
   hardware.asahi.peripheralFirmwareDirectory = ./firmware;
 
   # Use the systemd-boot EFI boot loader.
