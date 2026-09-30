@@ -15,18 +15,22 @@
     ./apple-silicon.nix
   ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "usbhid" "usb_storage" ];
+  boot.initrd.availableKernelModules = [
+    "nvme"
+    "usbhid"
+    "usb_storage"
+  ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/99e6b12c-fc18-4f28-b592-bb35ad386fc0";
+    device = "/dev/disk/by-uuid/1085e6dd-5bba-4521-adcc-4cc21929c6af";
     fsType = "ext4";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/41A2-1EFF";
+    device = "/dev/disk/by-uuid/E092-1D21";
     fsType = "vfat";
     options = [
       "fmask=0022"
@@ -34,7 +38,7 @@
     ];
   };
 
-  swapDevices = [ ];
+  swapDevices = [ { device = "/dev/disk/by-uuid/55b18368-703b-4a62-9503-c780de4cfad4"; } ];
 
   nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
 }
